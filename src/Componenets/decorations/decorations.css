@@ -148,6 +148,10 @@ thumbnails
   .decor-grid {
     grid-template-columns: 1fr;
   }
+    .decorations {
+    padding: 20px 5% !important;
+  }
+
    .images-grid {
     grid-template-columns: 1fr;
   }

@@ -79,7 +79,9 @@
     min-width: 100%;
     flex-shrink: 0;
   }
-
+  .reviews {
+    padding: 20px 5% !important;
+  }
   .review-card img {
     height: 450px;
     object-fit: contain;
