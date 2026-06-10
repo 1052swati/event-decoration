@@ -1,0 +1,136 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Video Background */
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Dark Overlay */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1;
+}
+
+/* Content */
+
+.hero-content {
+  text-align: center;
+  color: white;
+
+  width: 90%;
+  max-width: 900px;
+
+  animation: fadeUp 1.5s ease;
+}
+
+.hero-content h1 {
+  font-size: 4.5rem;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+/* Buttons */
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.book-btn {
+  padding: 15px 35px;
+  border: none;
+  background: #d4af37;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.book-btn:hover {
+  transform: translateY(-3px);
+}
+
+.call-btn {
+  padding: 15px 35px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.call-btn:hover {
+  background: white;
+  color: black;
+}
+
+/* Animation */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .book-btn,
+  .call-btn {
+    width: 220px;
+  }
+}

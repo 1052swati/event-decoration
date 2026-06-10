@@ -1,0 +1,60 @@
+.why-choose {
+  padding: 40px 8%;
+  background: white !important;
+}
+
+.why-choose h2 {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 60px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.feature-card {
+  background: white;
+  padding: 35px 25px;
+  border-radius: 20px;
+  text-align: center;
+
+  border: 2px solid #000;
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rbga(0, 0, 0, 0.15) ;
+}
+
+.feature-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.7;
+}
+
+@media (max-width: 992px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
