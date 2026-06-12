@@ -22,6 +22,9 @@ function Footer() {
             <li>Seawoods</li>
             <li>sanpada</li>
             <li>Juinagar</li>
+            <li>Belapur</li>
+            <li>Vashi</li>
+            <li>Ratnagiri</li>
           </ul>
         </div>
 
@@ -58,13 +61,13 @@ function Footer() {
           <p>📧 swamieventdecoration@gmail.com</p>
 
           <a
-            className="whatsapp-btn"
-            href="https://wa.me/919594239065"
-            target="_blank"
-            rel="noreferrer"
-          >
-            WhatsApp Us
-          </a>
+  className="whatsapp-btn"
+  href="https://wa.me/919594239065?text=Hello%20Swami%20Events%20and%20Decoration,%20I%20want%20decoration%20service%20in%20Mumbai/Ratnagiri.%20Please%20share%20details."
+  target="_blank"
+  rel="noreferrer"
+>
+  WhatsApp Us
+</a>
         </div>
 
         {/* Social Media */}
