@@ -175,13 +175,13 @@ export const decorations = [
 {
   id: 18,
   title: "Valentine's Day Decoration",
-  price: "₹2,500 - ₹8,000",
+  price: "₹3,000 - ₹10,000",
   images: [valentines1, valentines2, valentines3],
 },
 {
   id: 19,
   title: "Surprise Room Decoration",
-  price: "₹2,000 - ₹7,000",
+  price: "₹5,000 - ₹12,000",
   images: [surpriseRoom1, surpriseRoom2, surpriseRoom3],
 },
 {
@@ -193,7 +193,7 @@ export const decorations = [
 {
   id: 21,
   title: "Car Boot (Dikki) Surprise Decoration",
-  price: "₹2,500 - ₹8,000",
+  price: "₹3,500 - ₹7,000",
   images: [carBoot1, carBoot2, carBoot3],
 },
 ];
