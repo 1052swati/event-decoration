@@ -1,4 +1,6 @@
 import "./decorations.css";
+import { useState } from "react";
+
 import babyShower1 from "../../assets/babyShower1.jpeg";
 import babyShower2 from "../../assets/babyShower2.jpeg";
 import babyShower3 from "../../assets/babyShower3.jpeg";
@@ -45,8 +47,27 @@ import tattoo1 from "../../assets/tattoo1.jpeg"
 import tattoo2 from "../../assets/tattoo2.jpeg"
 import tattoo3 from "../../assets/tattoo3.jpeg"
 import houseparty1 from "../../assets/houseparty1.jpeg"
-import houseparty2 from "../../assets/houseparty3.jpeg"
+import houseparty2 from "../../assets/houseparty2.jpeg"
 import houseparty3 from "../../assets/houseparty3.jpeg"
+import candleLightDinner1 from "../../assets/candleLightDinner1.jpeg";
+import candleLightDinner2 from "../../assets/candleLightDinner2.jpeg";
+import candleLightDinner3 from "../../assets/candleLightDinner3.jpeg";
+
+import valentines1 from "../../assets/valentines1.jpeg";
+import valentines2 from "../../assets/valentines2.jpeg";
+import valentines3 from "../../assets/valentines3.jpeg";
+
+import surpriseRoom1 from "../../assets/surpriseRoom1.jpeg";
+import surpriseRoom2 from "../../assets/surpriseRoom2.jpeg";
+import surpriseRoom3 from "../../assets/surpriseRoom3.jpeg";
+
+import rooftop1 from "../../assets/rooftop1.jpeg";
+import rooftop2 from "../../assets/rooftop2.jpeg";
+import rooftop3 from "../../assets/rooftop3.jpeg";
+
+import carBoot1 from "../../assets/carBoot1.jpeg";
+import carBoot2 from "../../assets/carBoot2.jpeg";
+import carBoot3 from "../../assets/carBoot3.jpeg";
 
 export const decorations = [
   {
@@ -145,9 +166,78 @@ export const decorations = [
     price: "₹2,000 - ₹5,000",
     images: [houseparty1, houseparty2, houseparty3],
   },
+  {
+  id: 17,
+  title: "Candle Light Dinner Decoration",
+  price: "₹3,000 - ₹10,000",
+  images: [candleLightDinner1, candleLightDinner2, candleLightDinner3],
+},
+{
+  id: 18,
+  title: "Valentine's Day Decoration",
+  price: "₹2,500 - ₹8,000",
+  images: [valentines1, valentines2, valentines3],
+},
+{
+  id: 19,
+  title: "Surprise Room Decoration",
+  price: "₹2,000 - ₹7,000",
+  images: [surpriseRoom1, surpriseRoom2, surpriseRoom3],
+},
+{
+  id: 20,
+  title: "Rooftop Candle Light Dinner Decoration",
+  price: "₹5,000 - ₹15,000",
+  images: [rooftop1, rooftop2, rooftop3],
+},
+{
+  id: 21,
+  title: "Car Boot (Dikki) Surprise Decoration",
+  price: "₹2,500 - ₹8,000",
+  images: [carBoot1, carBoot2, carBoot3],
+},
 ];
 
+function DecorationCard({ item }) {
+  const [mainImage, setMainImage] = useState(item.images[0]);
 
+  return (
+    <div className="decor-card">
+
+      <div className="img-box">
+        <img src={mainImage} alt={item.title} />
+      </div>
+
+      <h3>{item.title}</h3>
+
+      <p className="price">{item.price}</p>
+
+      <div className="thumbs">
+        {item.images.map((img, index) => (
+          <img
+            key={index}
+            src={img}
+            alt=""
+            onClick={() => setMainImage(img)}
+          />
+        ))}
+      </div>
+
+      <button
+        className="book-btn"
+        onClick={() =>
+          window.open(
+            `https://wa.me/919594239065?text=Hello, Swami Events & Decoration, I want ${item.title} service in Mumbai/Ratnagiri. Please share details.`,
+            "_blank"
+          )
+        }
+      >
+        Book Now
+      </button>
+
+    </div>
+  );
+}
 
 function Decorations() {
   return (
@@ -157,34 +247,34 @@ function Decorations() {
         Beautiful setups for every occasion
       </p>
 
-      <div className="decor-grid">
+      {/* <div className="decor-grid">
         {decorations.map((item) => (
           <div className="decor-card" key={item.id}>
 
-            {/* MAIN IMAGE */}
+            
             <div className="img-box">
               <img src={item.images[0]} alt={item.title} />
             </div>
 
-            {/* TITLE */}
+            
             <h3>{item.title}</h3>
 
-            {/* PRICE */}
+            
             <p className="price">{item.price}</p>
 
-            {/* THUMBNAILS */}
+            
             <div className="thumbs">
               {item.images.map((img, index) => (
                 <img key={index} src={img} alt="" />
               ))}
             </div>
 
-            {/* BOOK NOW BUTTON (WHATSAPP) */}
+            
             <button
               className="book-btn"
               onClick={() =>
                 window.open(
-                  `https://wa.me/919594239065?text=Hello, I am interested in ${item.title}. Can we connect on a call to discuss details and pricing?`,
+                  `https://wa.me/919594239065?text=Hello, Swami Events & Decoration,I want ${item.title} service in Mumbai/Ratnagiri. Please share details.`,
                   "_blank"
                 )
               }
@@ -194,7 +284,16 @@ function Decorations() {
 
           </div>
         ))}
+      </div> */}
+        <div className="decor-grid">
+        {decorations.map((item) => (
+          <DecorationCard
+            key={item.id}
+            item={item}
+          />
+        ))}
       </div>
+
     </section>
   );
 }

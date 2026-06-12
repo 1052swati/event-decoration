@@ -20,7 +20,7 @@
   gap: 25px;
 }
 
-.decor-card {
+/* .decor-card {
   background: white;
   border-radius: 20px;
   overflow: hidden;
@@ -36,8 +36,31 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+} */
+
+.decor-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+
+  border: 2px solid #FFD700; /* Golden Border */
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.08),
+    0 0 0 4px rgba(255, 215, 0, 0.15);
+
+  transition: all 0.3s ease;
 }
 
+.decor-card:hover {
+  transform: translateY(-8px);
+
+  border-color: #d4af37;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.15),
+    0 0 20px rgba(255, 215, 0, 0.4);
+}
 .decor-card .book-btn {
   width: 80%;
   margin: 15px auto 20px;
@@ -130,7 +153,10 @@ thumbnails
   gap: 10px;
   padding: 10px;
 }
-
+.active-thumb {
+  border: 2px solid #e91e63 !important;
+  transform: scale(1.1);
+}
 .decor-image {
   width: 100%;
   height: auto;

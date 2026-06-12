@@ -44,8 +44,16 @@ function Footer() {
           <h3>Get In Touch</h3>
 
           <p>📞 +91 9594239065</p>
+          <p>📞 +91 8591094711</p>
 
-          <p>📍 Mumbai, Maharashtra</p>
+
+          <p>
+  📍 Plot No. 39,<br />
+  Near D Mart Road,<br />
+  Sector 14, Kharghar,<br />
+  Navi Mumbai, Panvel,<br />
+  Maharashtra - 410210
+</p>
 
           <p>📧 swamieventdecoration@gmail.com</p>
 

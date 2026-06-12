@@ -15,6 +15,11 @@ import firstNight from "../../assets/first-night.jpeg";
 import saptapadi from "../../assets/saptapadi.jpeg";
 import tattoo from "../../assets/bp-tatoo.jpeg";
 import birthdayhouseparty from "../../assets/birthdayparty.jpeg";
+import candleLightDinner from "../../assets/candle-light-dinner.jpeg";
+import valentinesDay from "../../assets/valentines-day.jpeg";
+import surpriseRoom from "../../assets/surprise-room.jpeg";
+import rooftopDinner from "../../assets/rooftop-dinner.jpeg";
+import carBoot from "../../assets/car-boot.jpeg";
 
 const servicesData = [
   {
@@ -94,9 +99,34 @@ const servicesData = [
   },
    {
     id: 16,
-    title: "Birthday house party decoration",
+    title: "Birthday House Party Decoration",
     image: birthdayhouseparty,
   },
+{
+  id: 17,
+  title: "Candle Light Dinner Decoration",
+  image: candleLightDinner,
+},
+{
+  id: 18,
+  title: "Valentine's Day Decoration",
+  image: valentinesDay,
+},
+{
+  id: 19,
+  title: "Surprise Room Decoration",
+  image: surpriseRoom,
+},
+{
+  id: 20,
+  title: "Rooftop Candle Light Dinner Decoration",
+  image: rooftopDinner,
+},
+{
+  id: 21,
+  title: "Car Boot (Dikki) Surprise Decoration",
+  image: carBoot,
+},
 ];
 function Services() {
   return (
