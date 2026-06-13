@@ -228,7 +228,7 @@ function DecorationCard({ item }) {
         onClick={() =>
           window.open(
             `https://wa.me/919594239065?text=Hello, Swami Events & Decoration, I want ${item.title} service in Mumbai/Ratnagiri. Please share details.`,
-            "_blank"
+             target="_blank"
           )
         }
       >
