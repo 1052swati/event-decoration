@@ -223,17 +223,30 @@ function DecorationCard({ item }) {
         ))}
       </div>
 
-      <button
+      {/* <button
         className="book-btn"
         onClick={() =>
           window.open(
             `https://wa.me/919594239065?text=Hello, Swami Events & Decoration, I want ${item.title} service in Mumbai/Ratnagiri. Please share details.`,
-             target="_blank"
+             "_blank"
           )
         }
       >
         Book Now
-      </button>
+      </button> */}
+      <button
+  className="book-btn"
+  onClick={() =>
+    window.open(
+      `https://wa.me/919594239065?text=${encodeURIComponent(
+        `Hello, Swami Events & Decoration, I want ${item.title} service in Mumbai/Ratnagiri. Please share details.`
+      )}`,
+      "_blank"
+    )
+  }
+>
+  Book Now
+</button>
 
     </div>
   );
