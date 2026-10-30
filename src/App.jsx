@@ -5,8 +5,8 @@ import Services from './Componenets/Services/Services'
 import Chooseus from './Componenets/Chooseus/Chooseus'
 import Decorations from './Componenets/decorations/decorations'
 import AboutUs from './Componenets/AboutUs/aboutUs'
-import Gallery from './Componenets/Gallery/gallery'
-import Reviews from './Componenets/Reviews/reviews'
+// import Gallery from './Componenets/Gallery/gallery'
+ import Reviews from './Componenets/Reviews/reviews'
 import FAQs from './Componenets/FAQs/FAQs'
 import Footer from './Componenets/Footer/footer'
 
@@ -19,8 +19,8 @@ const App = () => {
      <Services/>
      <Chooseus/>
      <Decorations/>
-     <Gallery/>
-     <Reviews/>
+     {/* <Gallery/> */}
+      <Reviews/> 
      <FAQs/>
      <Footer/>
     </div>

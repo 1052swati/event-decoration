@@ -7,11 +7,9 @@ import review4 from "../../assets/review4.jpeg";
 import review5 from "../../assets/review5.jpeg";
 import review6 from "../../assets/review6.jpeg";
 import review7 from "../../assets/review7.jpeg";
-import review8 from "../../assets/review8.jpeg";
-import review9 from "../../assets/review9.jpeg";
-import review10 from "../../assets/review10.jpeg";
 
-const reviews = [review1, review2, review3, review4, review5,review6,review7,review8,review9, review10 ];
+
+const reviews = [review1, review2, review3, review4, review5,review6,review7];
 
 function Reviews() {
   return (
