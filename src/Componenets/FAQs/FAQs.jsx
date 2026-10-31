@@ -1,42 +1,36 @@
-
 import { useState } from "react";
 import "./FAQs.css";
 
 const faqData = [
   {
-    question: "What decoration services do you offer?",
+    question: "What types of decoration services do you provide?",
     answer:
-      "We offer birthday decorations, baby showers, welcome baby decorations, Haldi, Mehendi, anniversaries, wedding decorations, real flower rangoli, glass painting, wall painting,tatoo, and customized event setups.",
+      "We provide Birthday, Baby Shower, Haldi, Mehendi, Anniversary, House Warming, Welcome Baby, Rangoli, First Night and customized decoration services.",
   },
   {
-    question: "Which areas do you serve?",
+    question: "How much advance booking is required?",
     answer:
-      "We provide our services in Panvel, Kharghar, Kamothe, Navi Mumbai,and  Mumbai. Please contact us to confirm availability for your location.",
-  },
-  {
-    question: "How early should I book my decoration?",
-    answer:
-      "We recommend booking 2–3 days in advance. For larger events or customized setups, booking earlier is recommended.",
+      "We recommend booking at least 2-3 days in advance to ensure availability.",
   },
   {
     question: "Do you provide customized decoration themes?",
     answer:
-      "Yes! We customize decorations according to your occasion, preferred theme, space, and budget.",
+      "Yes, we offer fully customized decoration themes according to your requirements and budget.",
   },
   {
     question: "What are your decoration charges?",
     answer:
-      "Prices depend on the event, decoration style, materials, and setup requirements. Contact us for a quote based on your needs.",
+      "Our decoration packages start from affordable rates and vary depending on the event type and customization requirements.",
   },
   {
-    question: "Do you bring your own decoration materials?",
+    question: "Do you provide decoration materials?",
     answer:
-      "Yes, decoration materials can be arranged according to the selected setup and package. Please discuss your requirements with us before booking.",
+      "Yes, we provide all required decoration materials including balloons, flowers, backdrops, lights and props.",
   },
   {
-    question: "How can I book your services?",
+    question: "How can I book a decoration service?",
     answer:
-      "You can call us at +91 9326276820 or contact us on WhatsApp to discuss your event date, location, decoration theme, and budget.",
+      "You can contact us directly through call or WhatsApp and discuss your event requirements.",
   },
 ];
 
@@ -44,49 +38,35 @@ function FAQs() {
   const [active, setActive] = useState(null);
 
   const toggleFAQ = (index) => {
-    setActive((previous) => (previous === index ? null : index));
+    setActive(active === index ? null : index);
   };
 
   return (
-    <section className="faq" id="faqs">
+    <section className="faq">
       <div className="faq-container">
-        <p className="faq-tag">HAVE QUESTIONS?</p>
-
-        <h2 className="faq-title">
-          Frequently Asked <span>Questions</span>
-        </h2>
+        <h2>FAQ's</h2>
 
         <p className="faq-subtitle">
-          Find answers to common questions about MinakshiArt Kalakaar
-          decoration services.
+          Find answers to the most common questions about our decoration services.
         </p>
 
-        <div className="faq-list">
-          {faqData.map((item, index) => (
+        {faqData.map((item, index) => (
+          <div className="faq-item" key={index}>
             <div
-              className={`faq-item ${active === index ? "active" : ""}`}
-              key={item.question}
+              className="faq-question"
+              onClick={() => toggleFAQ(index)}
             >
-              <button
-                type="button"
-                className="faq-question"
-                onClick={() => toggleFAQ(index)}
-                aria-expanded={active === index}
-              >
-                <span>{item.question}</span>
-                <span className="faq-icon" aria-hidden="true">
-                  {active === index ? "−" : "+"}
-                </span>
-              </button>
-
-              {active === index && (
-                <div className="faq-answer">
-                  <p>{item.answer}</p>
-                </div>
-              )}
+              <h3>{item.question}</h3>
+              <span>{active === index ? "−" : "+"}</span>
             </div>
-          ))}
-        </div>
+
+            {active === index && (
+              <div className="faq-answer">
+                <p>{item.answer}</p>
+              </div>
+            )}
+          </div>
+        ))}
       </div>
     </section>
   );
